@@ -15,8 +15,8 @@ public class Country {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	@Column(name="iso3code")
-	private String iso3code;
+	@Column(name="iso3Code")
+	private String iso3Code;
 	@Column(name="name")
 	private String name;
 	public Long getId() {
@@ -26,10 +26,10 @@ public class Country {
 		this.id = id;
 	}
 	public String getIso3code() {
-		return iso3code;
+		return iso3Code;
 	}
 	public void setIso3code(String iso3code) {
-		this.iso3code = iso3code;
+		this.iso3Code = iso3code;
 	}
 	public String getName() {
 		return name;
@@ -39,7 +39,7 @@ public class Country {
 	}
 	@Override
 	public String toString() {
-		return "Country [id=" + id + ", iso3code=" + iso3code + ", name=" + name + "]";
+		return "Country [id=" + id + ", iso3code=" + iso3Code + ", name=" + name + "]";
 	}
 
 	

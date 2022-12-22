@@ -11,7 +11,7 @@ public interface CountryCodesRepository extends JpaRepository<Country, Long> {
 
 	Page<Country> findAll(Pageable pageable);
 
-	@Query("SELECT c FROM Country c WHERE LOWER(c.name) LIKE LOWER(CONCAT('%', ?1,'%')) or LOWER(c.iso3code) LIKE LOWER(CONCAT('%', ?1,'%'))")
-	Page<Country> findByNameOrIso3codeLikeCaseInsensitive(String name, Pageable pageable);
+	@Query("SELECT c FROM Country c WHERE LOWER(c.name) LIKE LOWER(CONCAT('%', ?1,'%')) or LOWER(c.iso3Code) LIKE LOWER(CONCAT('%', ?1,'%'))")
+	Page<Country> findByNameOriso3CodeLikeCaseInsensitive(String name, Pageable pageable);
 
 }

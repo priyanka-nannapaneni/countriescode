@@ -47,7 +47,7 @@ public class CountryCodesController {
 			sortedCountriesList = countryCodesRepository.findAll(pageable);	
 		}
 			else
-				sortedCountriesList = countryCodesRepository.findByNameOrIso3codeLikeCaseInsensitive(q,pageable);
+				sortedCountriesList = countryCodesRepository.findByNameOriso3CodeLikeCaseInsensitive(q,pageable);
 
 		if (sortedCountriesList.isEmpty()) 
 	        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
